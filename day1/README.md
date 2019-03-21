@@ -39,4 +39,4 @@ Start the web server, default port is 8080
 
 > visit localhost:8080 in the browser, and play around with the UI
 
-![alt .env](imgs/hello_world.gif)
+![alt hello_world](imgs/hello_world.gif)
