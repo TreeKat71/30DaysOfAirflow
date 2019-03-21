@@ -16,19 +16,20 @@ $ export AIRFLOW_HOME=where_you_want/airflow
 ```
 
 
-## Install
+Installation
+------------
 What I prefer
-```python
+
 # use pipenv to control python version and create virtual environment
 $ pipenv shell --python 3.6
 # you should see "Loading .env environment variables…"
 # if you take .env as your previous step
 $ pipenv install apache-airflow
-```
+
 or
-```python
+
 $ pip install apache-airflow
-```
+
 
 ## Hello World
 ```python
