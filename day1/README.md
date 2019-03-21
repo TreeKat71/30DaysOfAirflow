@@ -1,13 +1,17 @@
+Day1: Set up airflow
+==============================================
+-----------------------------------------------------------------------
+
 Basic Setting
 ------------
 - airflow needs a home
 - "~/airflow" is the default, if you don't set it
 
-What I prefer: use .env to set environment variables
+What I prefer: use `.env` to set environment variables
 
     $ touch .env
 
-add "AIRFLOW_HOME=where_you_want/airflow" to .env
+Add "AIRFLOW_HOME=where_you_want/airflow" to `.env`
 
 ![alt .env](imgs/env.png)
 or
@@ -31,11 +35,11 @@ or
 
 Hello World
 ------------
-initialize the database (sqlite)
+Initialize the database (sqlite)
 
     $ airflow initdb
 
-start the web server, default port is 8080
+Start the web server, default port is 8080
 
     $ airflow webserver
 
