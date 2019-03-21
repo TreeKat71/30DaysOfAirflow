@@ -8,7 +8,8 @@ What I prefer: use `.env` to set environment variables
     $ touch .env
     Add "AIRFLOW_HOME=where_you_want/airflow" to .env
 
-![alt .env](imgs/env.png)
+![image](imgs/env.png)
+
 or
 
     $ export AIRFLOW_HOME=where_you_want/airflow
@@ -39,4 +40,4 @@ Start the web server, default port is 8080
 
 > visit localhost:8080 in the browser, and play around with the UI
 
-![alt hello_world](imgs/hello_world.gif)
+![image](imgs/hello_world.gif)
