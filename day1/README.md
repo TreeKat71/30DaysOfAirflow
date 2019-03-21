@@ -1,23 +1,17 @@
-Day1: Set up airflow
-==============================================
------------------------------------------------------------------------
-
 Basic Setting
 ------------
-- airflow needs a home
-- "~/airflow" is the default, if you don't set it
+**Airflow needs home :**
+> If you don't set it, "~/airflow" is the default
 
 What I prefer: use `.env` to set environment variables
 
     $ touch .env
-
-Add "AIRFLOW_HOME=where_you_want/airflow" to `.env`
+    Add "AIRFLOW_HOME=where_you_want/airflow" to .env
 
 ![alt .env](imgs/env.png)
 or
 
     $ export AIRFLOW_HOME=where_you_want/airflow
-
 
 
 Installation
@@ -43,5 +37,4 @@ Start the web server, default port is 8080
 
     $ airflow webserver
 
-- visit localhost:8080 in the browser
-- and enable the example dag in the home page
+> visit localhost:8080 in the browser, and play around with the UI
