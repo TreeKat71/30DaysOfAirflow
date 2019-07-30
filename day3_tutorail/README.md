@@ -11,6 +11,9 @@ There are steps to do this:
 - task_2 : join datasets and transform them to the format you want
 - task_3 : analyze data
 
+We need to make sure that task_2 is only executed when all the datasets are ready.
+Otherwise there may be some missing rows/columns in the join-dataset.
+So we need to set dependencies and define workflow.
 
 Define workflow
 ------------
