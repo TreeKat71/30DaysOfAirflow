@@ -24,16 +24,16 @@ DAG is a collection of tasks with their relationships and dependencies.
 
 Define dag
 ------------
-Define the "export report" workflow, triggered everyday
+Define the "daily report" workflow, triggered everyday
 ```python
-dag = DAG('export_report', # dag name
+dag = DAG('daily_report', # dag name
           default_args=default_args,  # args passed in as default, we will dive into them later
           schedule_interval=timedelta(days=1) # frequency that dag will be executed
           )
 ```
 Airflow also supports **cron expression**
 <br>
-The above workflow is equivant to below
+The above dag is equivant to below
 ```python
 dag = DAG(..., schedule_interval='0 0 * * *')
 or
