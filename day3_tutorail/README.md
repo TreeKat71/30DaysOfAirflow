@@ -43,7 +43,7 @@ dag = DAG(..., schedule_interval="@daily")
 
 Define tasks
 ------------
-There are many kinds of operators that you can use in the dag.
+There are many kinds of **operators** that you can use in the dag.
 Right now I simply use BashOperator as an example
 ```python
 t2 = BashOperator(
@@ -59,3 +59,13 @@ I think it is quite straightforward
 t1 >> t2
 # t2 will be executed when t1 is finished
 ```
+
+Summary
+------------
+Workflow is dag.
+<br>
+Tasks are what you are going to do in the workflow.
+<br>
+Task is defined by operator (like BashOperator)
+<br>
+Tasks need to be executed in a specific order so you need to set dependencies.
