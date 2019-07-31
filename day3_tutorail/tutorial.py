@@ -14,33 +14,35 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG('tutorial', default_args=default_args, schedule_interval=timedelta(days=1))
+dag = DAG('daily_report',
+          default_args=default_args,
+          schedule_interval=timedelta(days=1))
 
 # t1, t2 and t3 are examples of tasks created by instantiating operators
-t1 = BashOperator(
-    task_id='print_date',
-    bash_command='date',
+t1_a = BashOperator(
+    task_id='get_db_A',
+    bash_command='sh script_A.sh',
+    dag=dag)
+
+t1_b = BashOperator(
+    task_id='get_db_B',
+    bash_command='sh script_B.sh',
+    dag=dag)
+
+t1_c = BashOperator(
+    task_id='get_db_C',
+    bash_command='sh script_C.sh',
     dag=dag)
 
 t2 = BashOperator(
-    task_id='sleep',
-    bash_command='sleep 5',
-    retries=3,
+    task_id='join_data',
+    bash_command='sh join_data.sh',
     dag=dag)
-
-templated_command = """
-    {% for i in range(5) %}
-        echo "{{ ds }}"
-        echo "{{ macros.ds_add(ds, 7)}}"
-        echo "{{ params.my_param }}"
-    {% endfor %}
-"""
 
 t3 = BashOperator(
-    task_id='templated',
-    bash_command=templated_command,
-    params={'my_param': 'Parameter I passed in'},
+    task_id='analyze',
+    bash_command='sh analyze.sh',
     dag=dag)
 
 
-t1 >> t2 >> t3
+(t1_a, t1_b, t1_c) >> t2 >> t3
