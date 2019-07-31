@@ -4,14 +4,14 @@ Tutorial
 
 For examples, we want to export a report daily.
 <br>
-There are steps to do this:
+There are steps to do:
 - task_1_a : extract data from db_A
 - task_1_b : extract data from db_B
 - task_1_c : extract data from db_C
-- task_2 : join datasets and transform them to the format you want
+- task_2 : join dataset from A,B,C and transform them to the format you want
 - task_3 : analyze data
 
-We need to make sure that task_2 is only executed when all the datasets are ready.
+We need to make sure that task_2 is only executed when task_1_(a,b,c) are finished (all the dataset are ready).
 Otherwise there may be some missing rows/columns in the join-dataset.
 So we need to set dependencies and define workflow.
 
@@ -43,13 +43,13 @@ dag = DAG(..., schedule_interval="@daily")
 
 Define tasks
 ------------
-There are lots kinds of operators that you can use in the dag.
+There are many kinds of operators that you can use in the dag.
 Right now I simply use BashOperator as an example
 ```python
-t1 = BashOperator(
-      task_id='print_date',
-      bash_command='date',
-      dag=dag)
+t2 = BashOperator(
+        task_id='join_data',
+        bash_command='sh join_data.sh',
+        dag=dag)
 ```
 
 Define dependency
