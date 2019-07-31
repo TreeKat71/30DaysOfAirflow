@@ -11,6 +11,6 @@ Feel free to make a pull request if you find any mistake or better way to make t
 
 Contact me
 ------------
-Contact me though
+Contact me through
 [Email](mailto:muller79924@gmail.com)
 in english or chinese.
