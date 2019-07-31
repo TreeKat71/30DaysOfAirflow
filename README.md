@@ -5,9 +5,9 @@ As work needed, I start to learn knowledge about building data pipeline and how 
 Hope you can learn from this tutorial : )
 
 
-Find mistakes?
+Found mistakes?
 ------------
-Feel free to make a pull request if you find any mistake or better way to make the explanation more clearly.
+Feel free to make a pull request if you find any mistake or better way to make the explanation more clear.
 
 Contact me
 ------------
