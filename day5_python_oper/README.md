@@ -76,9 +76,7 @@ What I prefer:
 
 Or you can install it directly
 
-```python
-$ pip install requests
-```
+    $ pip install requests
 
 How to run it
 ------------
