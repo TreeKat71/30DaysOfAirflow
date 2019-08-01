@@ -27,7 +27,7 @@ Python Operator
 ------------
 > Executes a Python callable
 
-Simple example below
+Simple example
 
 ```python
 def python_func():
