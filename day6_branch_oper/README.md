@@ -77,7 +77,7 @@ def if_value_higher_3000():
     """
     res = requests.get("https://www.nasdaq.com/")
     SnP500_value = extractor.findall(res.text)[0]
-    if SnP500_value > 3000:
+    if float(SnP500_value) > 3000:
         return 'send_email'
     else:
         return 'do_nothing'
