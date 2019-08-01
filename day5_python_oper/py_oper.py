@@ -10,7 +10,7 @@ default_args = {
     'owner': 'muller'
 }
 
-dag = DAG('example_python_operators',
+dag = DAG('example_python_operator',
            catchup=False,
            start_date = datetime(2019, 1, 1),
            schedule_interval='@daily',
