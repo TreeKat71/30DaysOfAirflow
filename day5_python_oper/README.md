@@ -1,56 +1,115 @@
-Python Operators
+Python Operator
 ------------
-In this section, I will mention operators below
-- PythonOperator
-- BranchPythonOperator
+In this section, I want to design a pipeline to get S&P 500 value and send it to myself.
 
+This section will cover operators below
+- DummyOperator
+- PythonOperator
+
+
+Dummy Operator
+------------
+>  It literally does nothing.
+<br>
+Gernally, I use it to represent an unimplemented feature
+
+Sending email could be done by EmailOperator
+<br>
+As it is not mentioned yet, I use dummy operator to represent this feature.
+```python
+t_send_email = DummyOperator(
+    task_id='send_email',
+    dag=dag,
+)
+```
 
 Python Operator
 ------------
 > Executes a Python callable
 
-There are two main kinds of operators you can use in airflow.
-1. Operators
-2. Sensors
+Simple example below
 
-And I will briefly introduce what they are, and when you are going to use these.
+```python
+def python_func():
+  #do something
+  pass
+  # if you return a value, other tasks can use it through xcom
+
+t_python_oper = PythonOperator(
+                    task_id="task_name",
+                    python_callable=python_func,
+                    dag=dag)
+```
+
+In this tutorail, I write a python function to get S&P 500 value at the site nasdaq.
+<br>
+Don't be panic if you are not familiar with requests or regex. It is just an example for python operator.
+
+```python
+PATTERN = 'storeIndexInfo\("S&P 500","(.+?)"'
+extractor = re.compile(PATTERN)
+
+def get_SnP500():
+    """
+    use requests library to scrapy site nasdaq
+    to get S&P 500 value
+    """
+    res = requests.get("https://www.nasdaq.com/")
+    value = extractor.findall(res.text)[0]
+    return value
+
+t_get_SnP500 = PythonOperator(
+                    task_id="get_SnP500_value",
+                    python_callable=get_SnP500,
+                    dag=dag)
+```
 
 
-Python Branch Operator
+Notice
 ------------
->   Allows a workflow to "branch" or follow a path following the execution
-    of this task.
 
+Remember to install **requests**, if you don't have it.
 
-Operators are the core concept of the airflow, and you can use operators to do almost whatever you want.
+What I prefer:
 
-For example, you can use BashOperator to run a linux command, or use PythonOperator to run a python function. Lots of things you can do with operators.
+    $ pipenv install requests
 
+Or you can install it directly
 
+```python
+$ pip install requests
+```
 
-Sensors
+How to run it
 ------------
->Sensors are a special kind of operator that will keep running until a certain criterion is met.
+1. Remember to copy the `py_oper.py` to the `dags` folder
+2. $ airflow webserver
+3. Through the web ui, click the switch (next to the dag name) from off to on
+4. $ airflow scheduler
 
-For example, you need to analyze a file to export a report to your boss, but you don't know the exactly time the file will be done (which is handled by other team).
-You and other team have a deal, they will put the file at a specific folder when it is done.
-Then you can use sensor to poke this folder.
+And then you should see things like gif below
+<br>
 
-part of sensors:
-- bigquery_sensor
-- file_sensor
-- hdfs_sensor
-- http_sensor
-- s3_key_sensor
-- sql_sensor
-- sftp_sensor
-- ...
+![img](imgs/1.gif)
+*
+It will be a bit different, you may have a long list of dags.
 
+Until the color of task "get_SnP500" turn into dark green green, which means it is finished.
+![img](imgs/2.gif)
+
+You can click the **Admin** -> **Xcoms**
+![img](imgs/3.gif)
+
+You should see the S&P500 value you scrap from the site nasdaq, may be different from mine
+![img](imgs/4.png)
 
 
 What is Next
 ------------
-As different operators can do different thing, such as
-BashOperator can run a linux command, PythonOperator can run a python function. They must have different input arguments.
+Right now we can get email (not implement actully) with S&P500 value everyday.
 <br>
-So in the next few sections, I will introduce some operators I use more often.
+But what if I only want to get the email  when the value is higher than 3000.
+<br>
+How could we do this?
+<br>
+We can still implement it with PythonOperator, but there is another feature called **Branch** and I will introduce it in the next section.
