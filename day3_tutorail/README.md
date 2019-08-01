@@ -60,7 +60,14 @@ t1 >> t2
 # t2 will be executed when t1 is finished
 ```
 
-If you set it properly, you may see these kind of things
+Notice
+------------
+This example counld not be executed in fact, just simply a demonstration
+
+If you see how the dag looks in airflow, you can copy `tutorial.py` to the `dags` folder which we created at day2
+<br>
+If you set all things properly, you may see the same as mine
+
 ![image](imgs/dag.png)
 
 Summary
