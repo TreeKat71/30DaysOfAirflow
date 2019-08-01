@@ -1,4 +1,4 @@
-Branch Python Operator
+Goal
 ------------
 In this section, I only want to get mail when S&P 500 value is higher 3000.
 
@@ -92,4 +92,5 @@ t_get_SnP500 = BranchPythonOperator(
 Your result may be different from mine, which is dependent on the value you get.
 <br>
 I got 2980.38, lower than 3000, so do nothing
+
 ![img](imgs/branch.png)
