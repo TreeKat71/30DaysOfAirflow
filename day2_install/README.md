@@ -40,7 +40,7 @@ Initialize the database (sqlite)
 
     $ airflow initdb
 
-After you run this command, it will generate files under your folder
+After you run this command, it will generate files under your **AIRFLOW_HOME** folder
 
 ![image](imgs/files.png)
 <br>
