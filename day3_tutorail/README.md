@@ -60,6 +60,9 @@ t1 >> t2
 # t2 will be executed when t1 is finished
 ```
 
+If you set it properly, you may see these kind of things
+![image](imgs/dag.png)
+
 Summary
 ------------
 Workflow is dag.
