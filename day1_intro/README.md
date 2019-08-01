@@ -8,7 +8,7 @@ You should know things below
 **Airflow isn't**
 > data streaming solution (consider spark, storm)
 
-**Who Use Airflow**
+**Who Uses Airflow**
 - Airbnb
 - Lyft
 - PayPal
