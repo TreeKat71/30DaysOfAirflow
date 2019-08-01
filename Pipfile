@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 apache-airflow = "*"
+requests = "*"
 
 [requires]
 python_version = "3.6"
