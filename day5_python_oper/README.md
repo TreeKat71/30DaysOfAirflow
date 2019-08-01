@@ -1,6 +1,6 @@
 Python Operator
 ------------
-In this section, I want to design a pipeline to get S&P 500 value and send it to myself.
+In this section, I want to design a pipeline to get S&P 500 value and send an email as an alert to myself.
 
 This section will cover operators below
 - DummyOperator
@@ -51,7 +51,7 @@ extractor = re.compile(PATTERN)
 
 def get_SnP500():
     """
-    use requests library to scrapy site nasdaq
+    use requests library to scrape site nasdaq
     to get S&P 500 value
     """
     res = requests.get("https://www.nasdaq.com/")
@@ -83,11 +83,16 @@ $ pip install requests
 How to run it
 ------------
 1. Remember to copy the `py_oper.py` to the `dags` folder
-2. $ airflow webserver
-3. Through the web ui, click the switch (next to the dag name) from off to on
-4. $ airflow scheduler
+2. Start the airflow web UI server to help you monitor the tasks
 
-And then you should see things like gif below
+        $ airflow webserver
+
+3. Through the web UI, click the switch (next to the dag name) from off to on
+4. Start the scheduler to execute tasks
+
+        $ airflow scheduler
+
+And then you should see things like gifs below
 <br>
 
 ![img](imgs/1.gif)
@@ -100,16 +105,16 @@ Until the color of task "get_SnP500" turn into dark green green, which means it 
 You can click the **Admin** -> **Xcoms**
 ![img](imgs/3.gif)
 
-You should see the S&P500 value you scrap from the site nasdaq, may be different from mine
+You should see the S&P500 value you scrape from the site nasdaq, may be different from mine
 ![img](imgs/4.png)
 
 
 What is Next
 ------------
-Right now we can get email (not implement actully) with S&P500 value everyday.
+Right now we will get email (not implement actully) with S&P500 value everyday.
 <br>
-But what if I only want to get the email  when the value is higher than 3000.
+But what if I only want to get the email when the value is higher than 3000.
 <br>
-How could we do this?
+How could it be done?
 <br>
 We can still implement it with PythonOperator, but there is another feature called **Branch** and I will introduce it in the next section.
