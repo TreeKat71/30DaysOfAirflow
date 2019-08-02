@@ -96,3 +96,10 @@ Your result may be different from mine, which depends on the value you get.
 I got 2980.38, lower than 3000, so do nothing
 
 ![img](imgs/branch.png)
+
+
+What's Next
+------------
+In the next section, we are going to implement email feature.
+<br>
+Then we can get an email as an alert when value > 3000
