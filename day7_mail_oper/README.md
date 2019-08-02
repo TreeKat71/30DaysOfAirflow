@@ -61,8 +61,7 @@ Remember we ran command "airflow initdb" at day2, and it generated files automat
 <br>
 If we want to make EmailOperator work, we need to modify arguments in the `airflow.cfg`.
 
-*
-If you miss your 16_CHAR_APP_PASSWORD, just create a new one.
+*If you miss your 16_CHAR_APP_PASSWORD, just create a new one.
 
     [smtp]
     # the airflow.utils.email.send_email_smtp function, you have to configure an
