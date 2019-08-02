@@ -1,0 +1,68 @@
+Description
+------------
+In this section, I am going to implement the email feature with EmailOperator.
+
+This section will cover things below
+- EmailOperator
+- airflow config
+
+
+Email Operator
+------------
+>   Sends an email.
+
+Simple example
+
+```python
+t_email = MyEmailOperator(
+            task_id='task_name',
+            subject="email title",
+            to="airflow@example.com",
+            html_content="Hope you find this tutorial is useful :)",
+            dag=dag)
+```
+
+And I want to send an email to myself as an alert when value > 3000
+
+```python
+t_send_email = EmailOperator(
+            task_id='send_email',
+            subject="Today's S&P 500 value",
+            to="muller79924@gmail.com",
+            # please replace it with your own email address
+            html_content="Hey, it is higher than 3000",
+            dag=dag)
+```
+
+But who is going to send this email? from which email address?
+<br>
+So there are somthing to set yet.
+
+
+Google SMTP Setting
+------------
+You can choose whichever stmp provider you want, like Amazon, Microsoft, Mailgun ...
+<br>
+I choose Google as an example, because Gmail is the most popular one.
+<br>
+Before we can use google's smtp service, we need to create an application password:
+[Create & use App Passwords](https://support.google.com/accounts/answer/185833)
+<br>
+If you create it suceeuflly, you should get 16-character code as your application password.
+
+Airflow Config
+------------
+Remember we ran command "airflow initdb" at day2, and it generated files automatically, including default config `airflow.cfg`.
+<br>
+If we want to make EmailOperator work, we need to modify arguments in the `airflow.cfg`.
+
+    [smtp]
+    # the airflow.utils.email.send_email_smtp function, you have to configure an
+    # smtp server here
+    smtp_host = smtp.gmail.com
+    smtp_starttls = True
+    smtp_ssl = False
+    smtp_user = your@gmail.com
+    smtp_password = 16_CHAR_APP_PASSWORD
+    smtp_port = 587
+    smtp_mail_from = your@gmail.com
