@@ -28,7 +28,7 @@ And I want to send an email to myself as an alert when value > 3000
 t_send_email = EmailOperator(
             task_id='send_email',
             subject="Today's S&P 500 value",
-            to="muller79924@gmail.com",
+            to="receiver@gmail.com",
             # please replace it with your own email address
             html_content="Hey, it is higher than 3000",
             dag=dag)
@@ -36,7 +36,8 @@ t_send_email = EmailOperator(
 
 You may have some questions after reading the code above.
 <br>
-There is no "from"(sender) argument in EmailOperator, where can I set it?
+Where can I set the "sender" argument?
+<br>
 Where can I enter my email password?
 
 > We need to set these in `airflow.cfg`.
@@ -70,6 +71,7 @@ If we want to make EmailOperator work, we need to modify arguments in the `airfl
     smtp_password = 16_CHAR_APP_PASSWORD
     smtp_port = 587
     smtp_mail_from = your@gmail.com
+
 
 *
 If you miss your 16_CHAR_APP_PASSWORD, just create a new one.
