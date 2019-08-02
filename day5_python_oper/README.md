@@ -96,8 +96,7 @@ You can follow the gifs below
 
 ![img](imgs/1.gif)
 
-*
-It will be a bit different, you may have a long list of dags.
+*It will be a bit different, you may have a long list of dags.
 
 Until the color of task "get_SnP500" turn into dark green green, which means it is finished.
 ![img](imgs/2.gif)
