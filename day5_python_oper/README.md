@@ -90,10 +90,12 @@ How to run it
 
         $ airflow scheduler
 
-And then you should see things like gifs below
+
+You can follow the gifs below
 <br>
 
 ![img](imgs/1.gif)
+
 *
 It will be a bit different, you may have a long list of dags.
 
@@ -107,7 +109,7 @@ You should see the S&P500 value you scrape from the site nasdaq, may be differen
 ![img](imgs/4.png)
 
 
-What is Next
+What's Next
 ------------
 Right now we will get email (not implement actully) with S&P500 value everyday.
 <br>
