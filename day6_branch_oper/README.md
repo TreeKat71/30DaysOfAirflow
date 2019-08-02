@@ -89,7 +89,9 @@ t_get_SnP500 = BranchPythonOperator(
 )
 ```
 
-Your result may be different from mine, which is dependent on the value you get.
+Result
+------------
+Your result may be different from mine, which depends on the value you get.
 <br>
 I got 2980.38, lower than 3000, so do nothing
 
