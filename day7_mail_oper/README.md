@@ -14,7 +14,7 @@ Email Operator
 Simple example
 
 ```python
-t_email = MyEmailOperator(
+t_email = EmailOperator(
             task_id='task_name',
             subject="email title",
             to="airflow@example.com",
