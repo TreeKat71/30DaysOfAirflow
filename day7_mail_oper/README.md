@@ -78,4 +78,14 @@ If we want to make EmailOperator work, we need to modify arguments in the `airfl
 Result
 ------------
 After these hard work and setting, you can trigger your dag, and should get the result as mine.
+
 ![img](imgs/email.png)
+
+
+What's Next
+------------
+Right now, we will get an email with useless content when the value > 3000.
+<br>
+What if I do want to know the exact value.
+<br>
+In the next section, I will introduce feature **XCom** and why we need this.
