@@ -34,21 +34,25 @@ t_send_email = EmailOperator(
             dag=dag)
 ```
 
-But who is going to send this email? from which email address?
+You may have some questions after reading the code above.
 <br>
-So there are somthing to set yet.
+There is no "from"(sender) argument in EmailOperator, where can I set it?
+Where can I enter my email password?
 
+> We need to set these in `airflow.cfg`.
 
-Google SMTP Setting
+If you are familiar with smtp service, you can skip the next part and use whatever you prefer, otherwise I choose google as an example.
+
+Google SMTP Setting (Optional)
 ------------
-You can choose whichever stmp provider you want, like Amazon, Microsoft, Mailgun ...
+You can choose whichever smtp service provider you want, like Amazon, Microsoft, Mailgun ...
 <br>
 I choose Google as an example, because Gmail is the most popular one.
 <br>
 Before we can use google's smtp service, we need to create an application password:
 [Create & use App Passwords](https://support.google.com/accounts/answer/185833)
 <br>
-If you create it suceeuflly, you should get 16-character code as your application password.
+If you create it suceeuflly, you should get a 16-character code as your application password.
 
 Airflow Config
 ------------
@@ -66,3 +70,8 @@ If we want to make EmailOperator work, we need to modify arguments in the `airfl
     smtp_password = 16_CHAR_APP_PASSWORD
     smtp_port = 587
     smtp_mail_from = your@gmail.com
+
+*
+If you miss your 16_CHAR_APP_PASSWORD, just create a new one.
+
+After these hard work and setting, you should receive the email suceeuflly.
