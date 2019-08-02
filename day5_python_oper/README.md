@@ -1,4 +1,4 @@
-Python Operator
+Description
 ------------
 In this section, I want to design a pipeline to get S&P 500 value and send an email as an alert to myself.
 

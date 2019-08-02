@@ -1,4 +1,4 @@
-Goal
+Description
 ------------
 In this section, I only want to get mail when S&P 500 value is higher 3000.
 
