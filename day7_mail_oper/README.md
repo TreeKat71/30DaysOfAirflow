@@ -61,6 +61,9 @@ Remember we ran command "airflow initdb" at day2, and it generated files automat
 <br>
 If we want to make EmailOperator work, we need to modify arguments in the `airflow.cfg`.
 
+*
+If you miss your 16_CHAR_APP_PASSWORD, just create a new one.
+
     [smtp]
     # the airflow.utils.email.send_email_smtp function, you have to configure an
     # smtp server here
@@ -73,7 +76,7 @@ If we want to make EmailOperator work, we need to modify arguments in the `airfl
     smtp_mail_from = your@gmail.com
 
 
-*
-If you miss your 16_CHAR_APP_PASSWORD, just create a new one.
-
-After these hard work and setting, you should receive the email suceeuflly.
+Result
+------------
+After these hard work and setting, you can trigger your dag, and should get the result as mine.
+![img](imgs/email.png)
