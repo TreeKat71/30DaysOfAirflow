@@ -37,6 +37,8 @@ Resources
 I recommend you read these materials, will help you understand why you need airflow and how to use it more properly?
 - [Airflow official tutorial](https://airflow.apache.org/tutorial.html)
 
+- [Airflow Concept](https://airflow.apache.org/concepts.html)
+
 - A Beginner’s Guide to Data Engineering Series
   <br> by Robert Chang@Airbnb <br>
   [Part 1](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7)
