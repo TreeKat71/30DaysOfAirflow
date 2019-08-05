@@ -35,14 +35,12 @@ Variables
 In general, I will set variables from web UI, and read it from code.
 
 ###### Set from Web UI
-<br>
 
 ![img](imgs/var.gif)
 
 ![img](imgs/var.png)
 
 ###### Read from Python Code
-<br>
 
 Now we can rewrite the code with **variable** feature.
 <br>
