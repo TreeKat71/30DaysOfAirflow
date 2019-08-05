@@ -49,7 +49,7 @@ Now we can rewrite the code with **variable** feature.
 There are two ways:
 
 ```python
-# first: use airflow.models.variable.Variable
+# First: use airflow.models.variable.Variable
 from airflow.models import Variable
 
 my_email_addr = Variable.get("var1")
@@ -60,9 +60,11 @@ t_send_email = EmailOperator(
             to=my_email_addr,
             html_content="Hey, it is higher than 3000",
             dag=dag)
+```
 
-
-# second: use jinja template
+What I prefer:
+```python
+# Second: use jinja template
 t_send_email = EmailOperator(
             task_id='send_email',
             subject="Today's S&P 500 value",
@@ -72,10 +74,24 @@ t_send_email = EmailOperator(
 
 ```
 
+If there are many variables being used in a dag, I will use json format to store it, like var3.
+
+```python
+t_send_email = EmailOperator(
+            task_id='send_email',
+            subject="Today's S&P 500 value",
+            to=" {{ var.json.var3.email_to }} ",
+            cc=" {{ var.json.var3.email_cc }} ",
+            html_content="Hey, it is higher than 3000",
+            dag=dag)
+```
+
 
 Notice
 ------------
-If you want to dig into this feature, you can try to use var2.
+In this section, I just briefly introduce this feature, and there are still many details need to know.
+
+If you want to dig into it, you can try to use var2.
 
 You may find something weird, like it is a string type, not a list.
 
