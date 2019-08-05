@@ -87,6 +87,7 @@ What's Next
 Right now, we will get an email when the value > 3000.
 <br>
 What if my colleagues/friends also want to get the alert email.
-It may not be a good way to hard code the list of recipients. (you may change it frequently)
+<br>
+It may not be a good way to hard code the list of recipients, because you may change it frequently.
 <br>
 In the next section, I will introduce feature **Variable** and how to use it.
