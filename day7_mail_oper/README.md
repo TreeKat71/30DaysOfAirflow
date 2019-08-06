@@ -1,6 +1,6 @@
 Description
 ------------
-In this section, I am going to implement the email feature with EmailOperator.
+In this section, I am going to implement sending email with EmailOperator.
 
 This section will cover things below
 - EmailOperator
