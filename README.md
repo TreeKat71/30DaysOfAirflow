@@ -2,8 +2,19 @@
 ------------
 As work needed, I start to learn about building data pipeline and how to use apache airflow. I really love its design and how it works, so I decide to share my experience to who are going to learn airflow.
 <br>
-Hope you can learn from this tutorial : )
 
+In this tutorial, I will cover things below:
+- introduction & definition
+- basic operators
+- core features
+- tips & tricks
+- dockerize
+- advanced features(may not cover)
+
+
+Hope you can learn from it : )
+
+*If you find this helpful, give me a star or share this to your colleagues/classmates.
 
 Found mistakes?
 ------------
