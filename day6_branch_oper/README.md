@@ -61,7 +61,7 @@ t_branch_oper = BranchPythonOperator(
 )
 ```
 
-Then we can rewrite the PythonOperator with BranchPythonOperator
+Then I can rewrite this task with BranchPythonOperator
 
 ```python
 PATTERN = 'storeIndexInfo\("S&P 500","(.+?)"'
