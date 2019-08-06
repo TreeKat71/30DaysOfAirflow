@@ -11,7 +11,7 @@ default_args = {
     'owner': 'muller'
 }
 
-dag = DAG('example_email_operator',
+dag = DAG('example_email_operator_with_var',
            catchup=False,
            start_date = datetime(2019, 1, 1),
            schedule_interval='@daily',
