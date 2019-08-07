@@ -57,7 +57,7 @@ t_python_oper = PythonOperator(
 
 <br>
 
-Below I will demonstrate two way to fulfill popo's request.
+Below I demonstrate two way to fulfill popo's request.
 
 
 #### First
