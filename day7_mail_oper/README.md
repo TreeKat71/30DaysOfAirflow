@@ -44,7 +44,7 @@ Where can I enter my email password?
 
 If you are familiar with smtp service, you can skip the next part and use whatever you prefer, otherwise I choose google as an example.
 
-Google SMTP Setting (Optional)
+Google SMTP Setting (optional)
 ------------
 You can choose whichever smtp service provider you want, like Amazon, Microsoft, Mailgun ...
 <br>
@@ -53,7 +53,7 @@ I choose Google as an example, because Gmail is the most popular one.
 Before we can use google's smtp service, we need to create an application password:
 [Create & use App Passwords](https://support.google.com/accounts/answer/185833)
 <br>
-If you create it suceeuflly, you should get a 16-character code as your application password.
+If you create it successfully, you should get a 16-character code as your application password.
 
 Airflow Config
 ------------
@@ -84,10 +84,9 @@ After these hard work and setting, you can trigger your dag, and should get the 
 
 What's Next
 ------------
-Right now, we will get an email when the value > 3000.
-<br>
-What if my colleagues/friends also want to get the alert email.
-<br>
-It may not be a good way to hard code the list of recipients, because you may change it frequently.
-<br>
+Right now, we will get an email when the value > 3000, but what if my colleagues/friends also want to get the alert email.
+
+It might not be a good way to hard code the list of recipients, because you may change it frequently.
+
+
 In the next section, I will introduce feature **Variable** and how to use it.
