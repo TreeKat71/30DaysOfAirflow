@@ -35,7 +35,7 @@ Sensors
 ------------
 >Sensors are a special kind of operator that will keep running until a certain criterion is met.
 
-For example, you need to analyze a file to export a report to your boss, but you don't know the exactly time the file will be done (which is handled by other team).
+For example, you need to analyze a file to export a report to your boss, but you don't know the exactly time the file will be generated (which is handled by other team).
 You and other team have a deal, they will put the file at a specific folder when it is done.
 Then you can use sensor to poke this folder.
 
@@ -56,4 +56,5 @@ What is Next
 As different operators can do different thing, such as
 BashOperator can run a linux command, PythonOperator can run a python function. They must have different input arguments.
 <br>
-So in the next few sections, I will introduce some operators I use more often.
+
+In the next few sections, I will introduce some operators I use more often.
