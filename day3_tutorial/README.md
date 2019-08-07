@@ -1,4 +1,4 @@
-Tutorial
+Description
 ------------
 > Please read this with tutorial.py
 
@@ -64,7 +64,7 @@ Notice
 ------------
 This example counld not be executed in fact, just simply a demonstration
 
-If you see how the dag looks in airflow, you can copy `tutorial.py` to the `dags` folder which we created at day2
+If you want to see how the dag looks like in airflow, you can copy `tutorial.py` to the `dags` folder which we created at day2.
 <br>
 If you set all things properly, you may see the same as mine
 
@@ -72,7 +72,7 @@ If you set all things properly, you may see the same as mine
 
 Summary
 ------------
-Workflow is dag.
+A workflow is a dag.
 <br>
 Tasks are what you are going to do in the workflow.
 <br>
