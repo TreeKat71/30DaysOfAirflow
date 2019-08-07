@@ -67,7 +67,10 @@ Below I will demonstrate two way to fulfill popo's request.
 
         Python(scrape) >> Branch(>3000?) >> [Email, Dummy]
 
-So here I get S&P 500 value and return it. Airflow will automatically store the value for me. (Technical term: do a xcom push)
+So here I get S&P 500 value and return it.
+
+Airflow will automatically store the value for me. (Technical term: do a xcom push)
+
 ```python
 def get_SnP500():
     """
