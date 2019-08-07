@@ -11,7 +11,7 @@ Dummy Operator
 ------------
 >  It literally does nothing.
 <br>
-Gernally, I use it to represent an unimplemented feature
+Generally, I use it to represent an unimplemented feature
 
 Sending email could be done by EmailOperator
 <br>
@@ -41,9 +41,9 @@ t_python_oper = PythonOperator(
                     dag=dag)
 ```
 
-In this tutorail, I write a python function to get S&P 500 value at the site nasdaq.
+In this tutorial, I write a python function to get S&P 500 value at the site nasdaq.
 <br>
-Don't be panic if you are not familiar with requests or regex. It is just an example for python operator.
+Don't be panic if you are not familiar with web scraping or regex. It is just an example for python operator.
 
 ```python
 PATTERN = 'storeIndexInfo\("S&P 500","(.+?)"'
@@ -110,7 +110,7 @@ You should see the S&P500 value you scrape from the site nasdaq, may be differen
 
 What's Next
 ------------
-Right now we will get email (not implement actully) with S&P500 value everyday.
+Right now we will get email (not implement actually) with S&P500 value everyday.
 <br>
 But what if I only want to get the email when the value is higher than 3000.
 <br>
