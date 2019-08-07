@@ -110,6 +110,6 @@ You should see the S&P500 value you scrape from the site nasdaq, may be differen
 
 What's Next
 ------------
-Right now, we can get email (not implement actually) with S&P500 value everyday, but what if I only want to get the email when the value is higher than 3000.
+Right now, we can get email (not implement actually) with S&P500 value everyday, but what if I only want to get the email when the value is higher than 3000.How could this be done?
 
-How could this be done? We can still implement it with PythonOperator, but there is another feature called **Branch** and I will introduce it in the next section.
+We can still implement it with PythonOperator, but there is another feature called **Branch** and I will introduce it in the next section.
