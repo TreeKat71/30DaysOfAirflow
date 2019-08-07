@@ -95,7 +95,7 @@ Try to use var2 or var4, if you want to dig into it. You may find something weir
 
 ![img](imgs/var4.png)
 
-And you can read jinja document, try to figure out what is the meaning of this?.
+And you can read jinja document, try to figure out what is the meaning of this?
 ```python
 " {{ var.value.var4 | int }} "
 ```
