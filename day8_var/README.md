@@ -102,4 +102,4 @@ What's Next
 ------------
 Right now, I and my friends can get an email when the value > 3000. But one day Popo asked for another feature, she said the email content is useless and wanted to know the exact value.
 
-In the next section, I will introduce feature **Xcom** and show you how to use it to fulfill popo's request.
+In the next section, I will introduce feature **XCom** and show you how to use it to fulfill popo's request.
