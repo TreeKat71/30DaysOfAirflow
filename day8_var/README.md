@@ -89,7 +89,7 @@ Notice
 ------------
 In this section, I just briefly introduce this feature, and there are still many details need to know.
 
-If you are curious about the syntax how to retrieve **Variables** in jinja template, I recommend you read the official document. (Although I will cover it few section later)
+If you are curious about the syntax how to retrieve **Variables** in jinja template, I recommend you read the [official document](https://airflow.apache.org/concepts.html#variables). (Although I will cover it few section later)
 
 Try to use var2 or var4, if you want to dig into it. You may find something weird.
 
