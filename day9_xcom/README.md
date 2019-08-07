@@ -55,10 +55,10 @@ t_python_oper = PythonOperator(
 ```
 
 
+<br>
 
 Below I will demonstrate two way to fulfill popo's request.
 
-<br>
 
 #### First
 > Read this with xcom_ex1.py
