@@ -90,7 +90,12 @@ def if_value_higher_3000(**kwargs):
 #### Second
 > Read this with xcom_ex2.py
 
-I do a xcom push in the BranchPythonOperator
+I build pipeline in this order:
+
+        Branch(scrape & >3000?) >> [Email, Dummy]
+
+
+Do a xcom push in the BranchPythonOperator
 ```python
 def get_value_see_if_value_higher_3000(**kwargs):
     res = requests.get("https://www.nasdaq.com/")
@@ -100,7 +105,7 @@ def get_value_see_if_value_higher_3000(**kwargs):
     ...
 ```
 
-Then I do a xcom pull with jinja template.
+Then do a xcom pull with jinja template.
 
 ```python
 t_send_email = EmailOperator(
