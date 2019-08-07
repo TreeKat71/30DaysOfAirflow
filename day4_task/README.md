@@ -12,6 +12,11 @@ And I will briefly introduce what they are, and when you are going to use these.
 
 Operators
 ------------
+>While DAGs describe how to run a workflow, Operators determine what actually gets done.
+<br>
+<br>
+An operator describes a single task in a workflow. 
+
 Operators are the core concept of the airflow, and you can use operators to do almost whatever you want.
 
 For example, you can use BashOperator to run a linux command, or use PythonOperator to run a python function. Lots of things you can do with operators.
