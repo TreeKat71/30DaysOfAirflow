@@ -58,7 +58,9 @@ t_python_oper = PythonOperator(
 
 Below I will demonstrate two way to fulfill popo's request.
 
-##### First
+<br>
+
+#### First
 > Read this with xcom_ex1.py
 
  I build pipeline in this order:
@@ -85,7 +87,7 @@ def if_value_higher_3000(**kwargs):
     ....
 ```
 
-##### Second
+#### Second
 > Read this with xcom_ex2.py
 
 I do a xcom push in the BranchPythonOperator
@@ -109,7 +111,7 @@ t_send_email = EmailOperator(
             dag=dag)
 ```
 
-##### Third
+#### Third
 In fact, web scraping, branching(if/else), sending email can be done in only one PythonOperator.
 
 But I am not going to show you how to do this, I think you can figure it out.
