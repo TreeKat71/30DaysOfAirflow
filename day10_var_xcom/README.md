@@ -30,7 +30,7 @@ In general, I use **Variable** to store values like
 
 #### Set
 ```python
-# 1
+# 1 Code
 from airflow.models import Variable
 
 Variable.set(key, value)
@@ -50,7 +50,7 @@ refer to the previous section
 
 #### Get
 ```python
-# 1
+# 1 Code
 from airflow.models import Variable
 
 ## retrieve value with key "foo"
@@ -61,7 +61,7 @@ bar = Variable.get("bar", deserialize_json=True)
 baz = Variable.get("baz", default_var=default)
 
 
-# 2
+# 2 Jinja template
 {{ var.value.<variable_name> }}
 {{ var.json.<variable_name> }}
 ```
@@ -108,7 +108,7 @@ t_push = PythonOperator(
 
 #### Get
 ```python
-# 1 code
+# 1 Code
 def puller(**kwargs):
     ti = kwargs['ti']
     # get value with default key 'return_value'
@@ -116,7 +116,7 @@ def puller(**kwargs):
     # get value with specific key
     value2 = ti.xcom_pull(key=key, task_ids='task_id')
 
-# 2 jinja template
+# 2 Jinja template
 {{ ti.xcom_pull(task_ids='task_id') }}
 {{ ti.xcom_pull(key=key, task_ids='task_id') }}
 
