@@ -9,12 +9,8 @@ This section will cover things below
 
 Variable
 ------------
-> Variables are a generic way to store and retrieve arbitrary content or settings as a simple key value store within Airflow.
-<br>
-<br>
-Variables can be listed, created, updated and deleted from the UI (Admin -> Variables), code or CLI.
-<br>
-<br>
+> Variables are a generic way to store and retrieve arbitrary content or settings as a simple key value store within Airflow.<br><br>
+Variables can be listed, created, updated and deleted from the UI (Admin -> Variables), code or CLI.<br><br>
 It can be useful to have some variables or configuration items accessible and modifiable through the web UI.
 
 Use case: global/static setting
@@ -72,12 +68,8 @@ baz = Variable.get("baz", default_var=default)
 
 XCom
 ------------
->It is an abbreviation of “cross-communication”, let tasks exchange messages.
-<br>
-<br>
-XComs are principally defined by a key, value, and timestamp, but also track attributes like the task/DAG that created the XCom.
-<br>
-<br>
+>It is an abbreviation of “cross-communication”, let tasks exchange messages.<br><br>
+XComs are principally defined by a key, value, and timestamp, but also track attributes like the task/DAG that created the XCom.<br><br>
 XComs are similar to Variables, but are specifically designed for inter-task communication rather than global settings.
 
 Use case: inter-task communication
