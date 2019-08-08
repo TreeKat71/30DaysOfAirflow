@@ -1,6 +1,6 @@
 Description
 ------------
-In this section, I am going to demonstrate how to use feature **XCom**.
+In this section, I am going to demonstrate how to use BashOperator.
 
 This section will cover things below
 - BashOperator
