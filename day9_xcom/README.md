@@ -37,7 +37,7 @@ Here comes a value exchange mechanism called **XCom**.
 
 XCom
 ------------
->   XComs are similar to Variables, but are specifically designed for inter-task communication rather than global settings.
+>   XComs are similar to Variables, but are specifically designed for internal tasks' communication rather than global settings.
 
 If you read this tutorial carefully, you will find out I have already mentioned **XCom** in day5 - PythonOperator.
 
