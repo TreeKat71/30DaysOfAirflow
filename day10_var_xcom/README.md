@@ -19,10 +19,10 @@ It can be useful to have some variables or configuration items accessible and mo
 
 Use case: global/static setting
 
-![img](imgs/var.png)
-
 - key-value pair
 - value is always stored as **String** type
+
+![img](imgs/var.png)
 
 
 In general, I use **Variable** to store values like
@@ -34,24 +34,29 @@ In general, I use **Variable** to store values like
 
 #### Set
 ```python
+# 1
 from airflow.models import Variable
 
-# 1
 Variable.set(key, value)
+```
 
-# 2
-Web UI
-
-# 3
-Command line
+```bash
+# 2 Command line
 $ airflow variables --set key value
 ```
 
+```bash
+# 3 Web UI
+refer to the previous section
+```
+
+
+
 #### Get
 ```python
+# 1
 from airflow.models import Variable
 
-# 1
 ## retrieve value with key "foo"
 foo = Variable.get("foo")
 ## retrieve json content
@@ -77,11 +82,10 @@ XComs are similar to Variables, but are specifically designed for inter-task com
 
 Use case: inter-task communication
 
-![img](imgs/xcom.png)
-
 - defined by key, value, and timestamp
 - could be string, int, float... depend on the value you set/return
 
+![img](imgs/xcom.png)
 
 
 ### Syntax
