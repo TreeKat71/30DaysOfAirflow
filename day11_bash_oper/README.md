@@ -56,4 +56,4 @@ There are two ways
 2. SSHOperator
 
 In the next section, I will introduce how to use SSHOperator.
-(But it could be hard to do a practice, if you don't have a remote server)
+(It could be hard to practice if you don't have a remote server)
