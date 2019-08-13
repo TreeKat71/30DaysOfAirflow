@@ -4,12 +4,13 @@ As work needed, I start to learn about building data pipeline and how to use apa
 <br>
 
 In this tutorial, I will cover things below:
-- introduction & definition
-- basic operators
-- core features
-- tips & tricks
-- dockerize
-- advanced features(may not cover)
+- Introduction & definition
+- Core concept (dag, operators ...)
+- Basic operators
+- Additional features (var, xcom, branch, hook, conn...)
+- Tips & Tricks
+- Dockerize
+- More advanced features(may not cover)
 
 
 Hope you can learn from it : )
