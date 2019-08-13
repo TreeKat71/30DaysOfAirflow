@@ -35,7 +35,7 @@ t1 = BashOperator(
 )
 ```
 
-But I recommend you use SSHOperator instead, which uses **Hook**/**Connection** to access servers. Right now, just take them as a magic way to connect to servers, I will explain it in the next section.
+But I recommend you use SSHOperator instead, which uses **Hook**/**Connection** to access servers. Right now, just take them as a magic way to connect to servers, I will explain it in the next few sections.
 
 
 
@@ -60,4 +60,4 @@ What's Next
 ------------
 Right now, you can access remote server without password, but it is not an ideal way to handle this.
 
-In the next section, I will introduce how to use **Hook**/**Connection** to make your code more flexible and clear.
+In the next two sections, I will introduce how to use **Hook**/**Connection** to make your code more flexible and clear.
