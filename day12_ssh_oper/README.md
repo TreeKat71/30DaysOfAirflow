@@ -35,7 +35,7 @@ t1 = BashOperator(
 )
 ```
 
-But I recommend you use SSHOperator instead, which uses **Hook**/**Connection** to access servers. Right now, just take them as a magic way to connect to servers, I will explain it in the next few sections.
+But I recommend you use SSHOperator instead, which uses **Hook**/**Connection** to access servers. Right now, just take them as a magic way to connect to servers, I will explain it in the next two sections.
 
 
 
@@ -52,12 +52,19 @@ t1 = SSHOperator(
         ssh_conn_id='conn_id', # some magic
         command='cat sample.txt', # command run on remote server
         dag=dag)
+
+or
+t1 = SSHOperator(
+        task_id='task_name',
+        ssh_hook='hook', # some magic
+        command='cat sample.txt', # command run on remote server
+        dag=dag)
 ```
 
 
 
 What's Next
 ------------
-Right now, you can access remote server without password, but it is not an ideal way to handle this.
+Right now, you can access remote server without password, but it is not an ideal way to handle it in airflow.
 
 In the next two sections, I will introduce how to use **Hook**/**Connection** to make your code more flexible and clear.
