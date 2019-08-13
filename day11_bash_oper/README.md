@@ -49,7 +49,7 @@ If you trigger this dag, you should get something like "date value"
 
 What's Next
 ------------
-BashOperator execute commands locally. What if you want to run scripts on a remote server?
+BashOperator execute commands locally. What if I want to run scripts on a remote server?
 
 There are two ways
 1. BashOperator
